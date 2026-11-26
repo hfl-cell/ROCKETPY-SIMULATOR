@@ -1,0 +1,16 @@
+.vscode/
+
+# Ignorar arquivos de configuracao local que guardam senhas
+.env
+config.json
+
+# Ignorar pastas gigantes de dependencias (ex: JavaScript/Node)
+node_modules/
+
+# Ignorar arquivos do proprio sistema operacional (arquivos inuteis)
+.DS_Store
+Thumbs.db
+
+# Ignorar pastas geradas pelo Python
+__pycache__/
+*.pyc
