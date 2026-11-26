@@ -29,6 +29,8 @@ pip install rocketpy==1.13.0
 
 ## 2. Passo a Passo da Simulação
 
+### Link vídeo Demonstrativo de uso: https://youtu.be/nFE1nzfMWz4
+
 ### Etapa 1: Ambiente e Lançamento
 
 1. **Condições Atmosféricas:** Escolha entre `1` (Atmosfera padrão ISO) ou `2` (Condições climáticas reais de um local).
