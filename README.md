@@ -1,5 +1,11 @@
 # 🚀 Manual Rápido de Uso — Simulador de Voo (RocketPy)
 
+##Programadores:
+
+* Carlos V.
+* Henrique F. L.
+* Leonardo M. M.
+
 ## 0. Instalação das Bibliotecas
 
 * **Ambiente Python:** O código foi programado em **Python 3**, sendo recomendável utilizar um interpretador que opere nessa versão.
