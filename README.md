@@ -1,6 +1,6 @@
 # 🚀 Manual Rápido de Uso — Simulador de Voo (RocketPy)
 
-##Programadores:
+## Programadores:
 
 * Carlos V.
 * Henrique F. L.
