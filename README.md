@@ -29,7 +29,7 @@ pip install rocketpy==1.13.0
 
 ## 2. Passo a Passo da Simulação
 
-Link vídeo Demonstrativo de uso: 
+Link para o vídeo demonstrativo de uso: 
 ```base
 https://youtu.be/nFE1nzfMWz4
 ```
