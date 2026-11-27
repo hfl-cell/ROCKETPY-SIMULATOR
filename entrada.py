@@ -5,6 +5,7 @@ import math
 import os
 from pathlib import Path
 import re
+import sys
 
 os.chdir(Path(__file__).resolve().parent)
 
@@ -48,11 +49,11 @@ def personalizar(i):
                     break
                 except:
                     continue
-            texto = input(f"{chave} (ex.: {modelo}): ").strip()
-            if isinstance(modelo, str) and texto:
-                dicio[chave] = texto
+            if isinstance(modelo, str):
+                dicio[chave] = escolher_curva_motor()
                 break
-            elif isinstance(modelo, tuple):
+            texto = input(f"{chave} (ex.: {modelo}): ").strip()
+            if isinstance(modelo, tuple):
                 try:
                     val = ast.literal_eval(texto)
                     if isinstance(val, tuple) and len(val) == len(modelo) and all(isinstance(x, (int, float)) for x in val):
@@ -128,6 +129,27 @@ def escolher(i, rotulo):
     print(f"{rotulo}: '{arquivo.stem}' carregado.")
     return dados
 
+def escolher_curva_motor():
+    """Lista os arquivos da pasta, o usuário escolhe um arquivo salvo nele."""
+    pasta = Path("./Peças/curvas_propulsao_motores")
+    arquivos = sorted(pasta.glob("*.eng"))
+    if not arquivos:
+        print('\nNenhum arquivo .eng encontrado na pasta "curvas_propulsao_motores", \n\n Insira na pasta sua curva de propulsão .eng (um arquivo csv com extensão .eng)')
+        sys.exit("Programa Encerrado")
+        return None
+    else:
+        print("\n--- Curvas de propulsao disponíveis ---")
+        for n, arq in enumerate(arquivos, 1):
+            print(f" {n}) {arq.stem}")
+        n = pedir(
+            "Digite o número da opção: ",
+            int,
+            lambda v: 1 <= v <= len(arquivos),
+            f"digite um número inteiro de 1 a {len(arquivos)}",)
+        arquivo = arquivos[n - 1]
+        curva = arquivo
+        print(f"\"curvas_propulsao_motores\": '{arquivo.stem}' carregado.")
+        return str(curva)
 
 def escolher_coordenadas():
     global local
@@ -220,4 +242,3 @@ def coletar_foguete():
     escolher_nose()
     escolher_aleta()
     escolher_paraquedas()
-    
