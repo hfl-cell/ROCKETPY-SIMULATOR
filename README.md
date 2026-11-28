@@ -120,6 +120,7 @@ Nose (ogiva): 'teste_apagar' carregado.
 
 4. **Salvamento:** Dê um nome ao arquivo (sem espaços ou caracteres especiais) para salvar o foguete montado.
 
+[!IMPORTANT]
    **Atenção:** Para motores personalizados, salve a curva de empuxo (em formato CSV) na pasta “/Peças/curvas_propulsao_motores” e renomeie a extensão do arquivo de *.csv para .eng.*
 
 ---
